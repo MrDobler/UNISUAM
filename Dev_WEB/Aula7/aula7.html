@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8"/>
+    <script language="javascript">
+    
+    function validacoes(){
+	      function confSenha(){
+	      	var senha = document.form.senha.value;
+	      	var conf = document.form.conf.value;
+	      	if(senha != conf){
+	      		alert("As senhas não batem!");
+	      	}
+	      }
+
+	      function testNome(){
+	      	var nome = document.form.nome.value;
+	      	if(nome.length <= 2){
+	      		alert("Digite um nome válido.");
+	      	}
+	      }
+
+	      function testIdade(){
+	      	var idade = document.form.idade.value;
+	      	idade = parseInt(idade);
+	      	if(130 <idade < 10){
+	      		alert("Você deve ser maior de 10 anos.");
+	      	}
+	      }
+
+	       function testEnd(){
+	      	var end = document.form.end.value;
+
+	      	if(end.length <= 5){
+	      		alert("Digite um endereço válido.");
+	      	}
+	      }
+
+	      function testLogin(){
+	      	var login = document.form.login.value;
+	      	if(login.length < 5){
+	      		alert("Digite um login válido.");
+	      	}
+	      }
+
+	      function testSenha(){
+	      	var senha = document.form.senha.value;
+
+	      	if(senha.length <= 5){
+	      		alert("Digite uma senha válida.");
+	      	}
+	      }
+
+	       function testConf(){
+	      	var conf = document.form.conf.value;
+
+	      	if(conf.length <= 5){
+	      		alert("Digite uma senha válida.");
+	      	}
+	      }
+
+	      testNome();testIdade();testEnd();testLogin();testSenha();testConf();confSenha();
+    }
+    </script>
+  </head>
+  
+ <body>
+	
+	<form method="POST" name="form">
+		
+		Nome <input name="nome" type="text" ><br>
+		Idade <input name="idade" type="text" ><br>
+		Endereço<textarea id="end" name=""></textarea><br>
+		Login<input name="login" type="text" ><br>
+		Senha<input name="senha" type="password" ><br>
+		Confirmar Senha<input name="conf" type="password" ><br>
+		<input type="submit" value="Enviar" onClick="javascript:validacoes();">
+		<input type="reset">
+
+	</form>
+	
+ </body>
