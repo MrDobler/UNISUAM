@@ -3,13 +3,15 @@
 
 int *btree;
 
-struct btree{
+struct btree
+{
     int valor;
     int *esq;
     int *dir;
 };
 
-int insere(struct btree atual,struct btree novoNum){
+int insere(struct btree atual,struct btree novoNum)
+{
     if(&atual == NULL)
         return &novoNum;
     else
@@ -20,10 +22,13 @@ int insere(struct btree atual,struct btree novoNum){
     return &novoNum;
 }
 
-int primeiraRaiz(struct btree novoNum){
+int primeiraRaiz(struct btree novoNum)
+{
     raiz = insere(struct btree raiz, struct btree novoNum);
 }
-main(){
+
+main()
+{
     struct btree arvoreB;
 
     int numero;
